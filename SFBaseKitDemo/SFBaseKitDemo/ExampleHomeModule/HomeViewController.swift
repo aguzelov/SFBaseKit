@@ -8,6 +8,12 @@
 
 import SFBaseKit
 
+protocol ViewModelProtocol: class {
+    var tableDataSource: ExampleDataSourceProtocol { get }
+    var collectionDataSource: ExampleDataSourceProtocol { get }
+    func start()
+}
+
 protocol HomeSceneDelegate: Coordinator {
     func homeSceneShouldContinueToLogOut()
 }
@@ -15,9 +21,18 @@ protocol HomeSceneDelegate: Coordinator {
 class HomeViewController: UIViewController {
     
     unowned var sceneDelegate: HomeSceneDelegate!
+    private var viewModel: ViewModelProtocol!
+    
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel = HomeViewModel()
+        tableView.listen(viewModel.tableDataSource)
+        collectionView.listen(viewModel.collectionDataSource)
+        viewModel.start()
     }
     
     @IBAction func DidTapOnLogOutButton(_ sender: Any) {
@@ -31,3 +46,4 @@ extension HomeViewController: StoryboardInstantiatable {
         return "HomeScreen"
     }
 }
+

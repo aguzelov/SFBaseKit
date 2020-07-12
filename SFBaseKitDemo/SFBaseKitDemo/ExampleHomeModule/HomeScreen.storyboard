@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -15,12 +15,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home Screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Qe-BR-zSY">
-                                <rect key="frame" x="125.5" y="439.5" width="163.5" height="27"/>
-                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Wz-xx-2ce">
                                 <rect key="frame" x="158.5" y="660" width="97" height="39"/>
                                 <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="22"/>
@@ -31,20 +25,47 @@
                                     <action selector="DidTapOnLogOutButton:" destination="V7b-YH-6cx" eventType="touchUpInside" id="oAO-KR-Z6V"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jnX-Qh-U6z">
+                                <rect key="frame" x="0.0" y="44" width="414" height="293"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="293" id="jcE-rh-UuH"/>
+                                </constraints>
+                            </tableView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="B9t-VG-UNa">
+                                <rect key="frame" x="0.0" y="337" width="414" height="313"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="obA-yZ-wx4">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="7Wz-xx-2ce" firstAttribute="centerX" secondItem="28l-bW-1y4" secondAttribute="centerX" id="1uC-2X-291"/>
-                            <constraint firstItem="3Qe-BR-zSY" firstAttribute="centerX" secondItem="28l-bW-1y4" secondAttribute="centerX" id="27K-mR-USI"/>
+                            <constraint firstItem="jnX-Qh-U6z" firstAttribute="top" secondItem="28l-bW-1y4" secondAttribute="top" id="70Z-7a-321"/>
                             <constraint firstItem="7Wz-xx-2ce" firstAttribute="centerY" secondItem="28l-bW-1y4" secondAttribute="centerY" multiplier="1.5" id="GXd-eB-AxT"/>
-                            <constraint firstItem="3Qe-BR-zSY" firstAttribute="centerY" secondItem="28l-bW-1y4" secondAttribute="centerY" id="miU-lC-V1U"/>
+                            <constraint firstItem="B9t-VG-UNa" firstAttribute="leading" secondItem="28l-bW-1y4" secondAttribute="leading" id="TdX-Ph-MUp"/>
+                            <constraint firstItem="28l-bW-1y4" firstAttribute="trailing" secondItem="B9t-VG-UNa" secondAttribute="trailing" id="XUK-WU-cnx"/>
+                            <constraint firstItem="B9t-VG-UNa" firstAttribute="top" secondItem="jnX-Qh-U6z" secondAttribute="bottom" id="akw-Ah-RD2"/>
+                            <constraint firstItem="jnX-Qh-U6z" firstAttribute="leading" secondItem="28l-bW-1y4" secondAttribute="leading" id="i5K-J3-9Vh"/>
+                            <constraint firstItem="28l-bW-1y4" firstAttribute="trailing" secondItem="jnX-Qh-U6z" secondAttribute="trailing" id="qEf-YN-Gvd"/>
+                            <constraint firstItem="7Wz-xx-2ce" firstAttribute="top" secondItem="B9t-VG-UNa" secondAttribute="bottom" constant="10" id="voa-Kk-GRE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="28l-bW-1y4"/>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="B9t-VG-UNa" id="r9a-yW-i2i"/>
+                        <outlet property="tableView" destination="jnX-Qh-U6z" id="7Em-8t-hoU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QL8-G2-tBn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="465" y="323"/>
+            <point key="canvasLocation" x="463.768115942029" y="322.76785714285711"/>
         </scene>
     </scenes>
 </document>

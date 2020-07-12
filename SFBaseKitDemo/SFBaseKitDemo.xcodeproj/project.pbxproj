@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0269C3FC24BB5A2B006ECA6E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0269C3FB24BB5A2B006ECA6E /* HomeViewModel.swift */; };
+		0269C40024BB9D27006ECA6E /* ExampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0269C3FE24BB9D27006ECA6E /* ExampleTableViewCell.swift */; };
+		0269C40124BB9D27006ECA6E /* ExampleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0269C3FF24BB9D27006ECA6E /* ExampleTableViewCell.xib */; };
+		0269C40524BB9DC9006ECA6E /* ExampleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0269C40324BB9DC9006ECA6E /* ExampleCollectionViewCell.swift */; };
+		0269C40624BB9DC9006ECA6E /* ExampleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0269C40424BB9DC9006ECA6E /* ExampleCollectionViewCell.xib */; };
+		0269C40A24BBA9A0006ECA6E /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0269C40924BBA9A0006ECA6E /* Section.swift */; };
+		0269C40D24BBA9E5006ECA6E /* ExampleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0269C40C24BBA9E5006ECA6E /* ExampleDataSource.swift */; };
+		0269C40F24BBB2DA006ECA6E /* ContentViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0269C40E24BBB2DA006ECA6E /* ContentViewProtocol.swift */; };
 		115B2346239A63DC001A2472 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115B2345239A63DC001A2472 /* AppDelegate.swift */; };
 		115B234F239A63DC001A2472 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 115B234E239A63DC001A2472 /* Assets.xcassets */; };
 		115B2352239A63DC001A2472 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 115B2350239A63DC001A2472 /* LaunchScreen.storyboard */; };
@@ -35,6 +43,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0269C3FB24BB5A2B006ECA6E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		0269C3FE24BB9D27006ECA6E /* ExampleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTableViewCell.swift; sourceTree = "<group>"; };
+		0269C3FF24BB9D27006ECA6E /* ExampleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExampleTableViewCell.xib; sourceTree = "<group>"; };
+		0269C40324BB9DC9006ECA6E /* ExampleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleCollectionViewCell.swift; sourceTree = "<group>"; };
+		0269C40424BB9DC9006ECA6E /* ExampleCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExampleCollectionViewCell.xib; sourceTree = "<group>"; };
+		0269C40924BBA9A0006ECA6E /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		0269C40C24BBA9E5006ECA6E /* ExampleDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleDataSource.swift; sourceTree = "<group>"; };
+		0269C40E24BBB2DA006ECA6E /* ContentViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewProtocol.swift; sourceTree = "<group>"; };
 		036AB0F5B4B6F72559F583C1 /* Pods-BaseKitDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseKitDemoTests.release.xcconfig"; path = "Target Support Files/Pods-BaseKitDemoTests/Pods-BaseKitDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		08631944DB447F5F44EE5286 /* Pods-BaseKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseKitDemo.debug.xcconfig"; path = "Target Support Files/Pods-BaseKitDemo/Pods-BaseKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		115B2342239A63DC001A2472 /* SFBaseKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SFBaseKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +100,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0269C3FD24BB9D0A006ECA6E /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				0269C3FE24BB9D27006ECA6E /* ExampleTableViewCell.swift */,
+				0269C3FF24BB9D27006ECA6E /* ExampleTableViewCell.xib */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		0269C40224BB9DAF006ECA6E /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				0269C40324BB9DC9006ECA6E /* ExampleCollectionViewCell.swift */,
+				0269C40424BB9DC9006ECA6E /* ExampleCollectionViewCell.xib */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		0269C40724BBA989006ECA6E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0269C40B24BBA9C0006ECA6E /* DataSource */,
+				0269C40824BBA992006ECA6E /* Model */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		0269C40824BBA992006ECA6E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0269C40924BBA9A0006ECA6E /* Section.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0269C40B24BBA9C0006ECA6E /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				0269C40C24BBA9E5006ECA6E /* ExampleDataSource.swift */,
+				0269C40E24BBB2DA006ECA6E /* ContentViewProtocol.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
 		115B2339239A63DC001A2472 = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +167,7 @@
 		115B2344239A63DC001A2472 /* SFBaseKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				0269C40724BBA989006ECA6E /* Utils */,
 				C7CA722D244ECFA3002D0076 /* ExampleHomeModule */,
 				4A9B65952446E12A006AC1F9 /* ExampleLoginModule */,
 				4A9B65922446E0A9006AC1F9 /* AppCoordinator */,
@@ -158,9 +219,12 @@
 		C7CA722D244ECFA3002D0076 /* ExampleHomeModule */ = {
 			isa = PBXGroup;
 			children = (
+				0269C40224BB9DAF006ECA6E /* CollectionViewCell */,
+				0269C3FD24BB9D0A006ECA6E /* TableViewCell */,
 				C7CA722E244ECFCB002D0076 /* HomeCoordinator.swift */,
 				C7CA7232244ED008002D0076 /* HomeViewController.swift */,
 				C7CA7230244ECFEE002D0076 /* HomeScreen.storyboard */,
+				0269C3FB24BB5A2B006ECA6E /* HomeViewModel.swift */,
 			);
 			path = ExampleHomeModule;
 			sourceTree = "<group>";
@@ -274,9 +338,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				115B2352239A63DC001A2472 /* LaunchScreen.storyboard in Resources */,
+				0269C40124BB9D27006ECA6E /* ExampleTableViewCell.xib in Resources */,
 				C7CA7231244ECFEE002D0076 /* HomeScreen.storyboard in Resources */,
 				115B234F239A63DC001A2472 /* Assets.xcassets in Resources */,
 				4A9B65992446E278006AC1F9 /* LoginScreen.storyboard in Resources */,
+				0269C40624BB9DC9006ECA6E /* ExampleCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,11 +425,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A9B659C2446E31E006AC1F9 /* LoginViewController.swift in Sources */,
+				0269C3FC24BB5A2B006ECA6E /* HomeViewModel.swift in Sources */,
 				4A9B659E2446E345006AC1F9 /* ForgottenPasswordViewController.swift in Sources */,
 				4A9B65942446E0D1006AC1F9 /* AppCoordinator.swift in Sources */,
+				0269C40524BB9DC9006ECA6E /* ExampleCollectionViewCell.swift in Sources */,
 				115B2346239A63DC001A2472 /* AppDelegate.swift in Sources */,
+				0269C40F24BBB2DA006ECA6E /* ContentViewProtocol.swift in Sources */,
 				4A9B65972446E20F006AC1F9 /* LoginCoordinator.swift in Sources */,
+				0269C40D24BBA9E5006ECA6E /* ExampleDataSource.swift in Sources */,
+				0269C40024BB9D27006ECA6E /* ExampleTableViewCell.swift in Sources */,
 				C7CA7233244ED008002D0076 /* HomeViewController.swift in Sources */,
+				0269C40A24BBA9A0006ECA6E /* Section.swift in Sources */,
 				C79A90112456BA04000AA412 /* Coordinator+AppCoordinator.swift in Sources */,
 				C7CA722F244ECFCB002D0076 /* HomeCoordinator.swift in Sources */,
 			);
